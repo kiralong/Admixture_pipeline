@@ -25,10 +25,10 @@ According to the `Admixture` [manual](https://dalexander.github.io/admixture/adm
 ### Step 3: Run `Admixture`
 Next, run the script [run_admixture.sh](run_admixture.sh) to submit a job and run admixture to the number of k populations desired. In my case, I have 9 sampled populations so I ran K 1-9, captured the output for graphing and the cv error to find my ideal k. In the loop, you can change the maximal k that you want instead of 9. 
 
-## Step 4: Plot cv error to find ideal k value
+### Step 4: Plot cv error to find ideal k value
 [Run_admixture.sh](run_admixture.sh) will make a new directory for each specified K to hold the outputs. To find the ideal k for your dataset, you need to plot a line graph and look for the smallest cv error value. Go to the tail of the `kvalue.log` in each directory and copy the value labled `CV error (K=1): 0.27774` Of all your k values, the one with the lowest value is your best k.
 
-## Step 5: Plot stacked bar plots
+### Step 5: Plot stacked bar plots
 Lastly, you'll want to make stacked bar plots of all your individuals and their respective k values. I downloaded the file `admixture_K1.tsv` and put this into R to plot it. See [admixture_plot.R](admixture_plot.R) for how I made my admixture plots. 
 
 Note that I wanted to order the stacked bar plots in descending order of the K values but I currently can't get this to work. 
