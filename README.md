@@ -29,7 +29,7 @@ Next, run the script [run_admixture.sh](run_admixture.sh) to submit a job and ru
 [Run_admixture.sh](run_admixture.sh) will make a new directory for each specified K to hold the outputs. To find the ideal k for your dataset, you need to plot a line graph and look for the smallest cv error value. Go to the tail of the `kvalue.log` in each directory and copy the value labled `CV error (K=1): 0.27774` Of all your k values, the one with the lowest value is your best k.
 
 ### Step 5: Plot stacked bar plots
-Lastly, you'll want to make stacked bar plots of all your individuals and their respective k values. I downloaded the file `admixture_K1.tsv` and put this into R to plot it. See [admixture_plot.R](admixture_plot.R) for how I made my admixture plots. 
+Lastly, you'll want to make stacked bar plots of all your individuals and their respective k values. I downloaded the file `admixture_K1.tsv` and put this into R to plot it. See [admixture_plot.R](admixture_plot.R) for how I made my admixture plots. This R Script was written with `R version 3.6.3`.
 
 Note that I wanted to order the stacked bar plots in descending order of the K values but I currently can't get this to work. 
 
